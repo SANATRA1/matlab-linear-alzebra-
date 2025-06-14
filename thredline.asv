@@ -1,0 +1,22 @@
+v3a =[1 3 -4 ]
+v3b = round(randn(1,3)*5);
+
+figure(2),clf
+
+%plot vector 
+plot3([0 v3a(1)],[0 v3a(2)],[0 v3a(3)],'k','lineWidth',3)
+hold on 
+plot3([0 v3b(1)],[0 v3b(2)],[0 v3b(3)],'r','LineWidth',3)
+
+%set square axes 
+
+axlims = max ([norm(v3a) norm(v3b)]);
+set(gca,'xlkim',[-1,1]*axlims,'ylim',[-1,1]*axlims,'zlim',[-1,1]*axlims)
+grid on 
+axis square
+
+plot o lines 
+
+hold on 
+h1 = plot3(get(gca,'xlim'),[0 0].[0 0],'r--');
+h2 = plot3([0 0],get(gca,'ylim'))
